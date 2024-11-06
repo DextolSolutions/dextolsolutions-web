@@ -1,0 +1,140 @@
+.main {
+    height: 100vh;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh; /* Adjust height as necessary */
+    color: #fff;
+    border-radius: 25px;
+    text-align: center; /* Center text in this section */
+    padding: 0 80px; /* Adjust padding for top and bottom */
+}
+
+.about-title {
+    font-size: 2.5rem; /* You can keep or adjust the font size */
+    padding-bottom: 10px;
+    border-bottom: #f39c12 2px solid;
+    color: #fff;
+    margin-top: 80px; /* Spacing above title */
+    font-weight: 700; /* Font weight for emphasis */
+    letter-spacing: 2px; /* Letter spacing */
+    text-align: center; /* Center text */
+}
+
+.hero-section-2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -25%);
+    height: max-content;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 25px; /* Adds 25px gap between buttons */
+    margin-top: 20px; /* Space between the buttons and the rest of the content */
+  }
+  
+  /* Button Styling */
+  .hero-button-about {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-button-about:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Icon Styling */
+  .button-icon {
+    margin-right: 8px; /* Space between the icon and the text */
+    font-size: 1.5rem; /* Adjust the size of the icon */
+    image-rendering: optimizeQuality;
+  }
+
+
+  
+/* About Content Section */
+.about-content-section {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: center; /* Center items horizontally */
+    padding: 40px; /* Padding around the content */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    max-width: 1500px; /* Increase max width for better readability */
+    color: #fff; /* Text color */
+    height: fit-content; /* Full height of the viewport */
+    text-align: center; /* Center text in this section */
+}
+
+/* Container for About Info */
+.about-info-container {
+    width: 40%; /* Adjust width as necessary */
+    text-align: left; /* Align text to the left for better readability */
+    position: relative; /* Use relative positioning */
+    margin-right: 20px; /* Spacing to separate from separator */
+}
+
+/* Separator */
+.middle-separator {
+    position: absolute; /* Absolute positioning */
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%); /* Center the separator */
+    width: 2px; /* Width of the separator */
+    background-color: rgba(255, 255, 255, 0.5); /* Light color for visibility */
+    margin: 0 20px; /* Margin for spacing */
+    height: 50%; /* Height of the separator */
+}
+
+/* Stacked Subheadings Wrapper */
+.subheading-wrapper {
+    width: 55%; /* Increase width to fit stacked items */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    position: relative; /* Use relative positioning */
+    margin-left: 20px; /* Spacing to separate from separator */
+}
+
+/* Subheadings Styling */
+.about-subheading {
+    font-size: 1.5rem; /* Adjust font size if necessary */
+    color: #ffffff75; /* Accent color for headings */
+    margin: 20px 0; /* Space above and below */
+}
+
+/* Existing Styles */
+.about-heading {
+    font-size: 2rem; /* Heading size */
+    color: #ffffff75; /* Accent color for headings */
+    margin: 10px 0; /* Space above and below */
+}
+
+.about-text {
+    font-size: 1.2rem; /* Text size */
+    margin: 20px 0; /* Space between paragraphs */
+}
+
+.about-text a {
+    color: #f39c12; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.about-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

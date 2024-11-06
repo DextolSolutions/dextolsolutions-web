@@ -1,0 +1,273 @@
+:root {
+    --buttonGrayColor: rgba(128, 128, 128, 0.25); /* Gray background color with 25% opacity */
+}
+
+/* Avatar Section */
+.avatar-container {
+    position: absolute;
+    top: 25%;
+    left: 5%; /* Adjust this for horizontal positioning */
+    transform: translateY(-25%); /* Vertically centered in the first 100vh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; /* Ensure it's above the background sections */
+}
+.avatar-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Typewriter effect */
+.typewriter {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff50;
+    letter-spacing: 1.5px;
+    border-right: 2px solid #fff; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Start hidden */
+    animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Reveal full text */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    color: #eee; /* Text color */
+    text-align: center;
+    padding: 30px; /* Slightly reduced padding for better scaling */
+    transform: scale(1.05); /* Adjusted scale for the section */
+    position: relative; /* Required for positioning the triangle */
+}
+
+.hero-title {
+    font-size: 4rem; /* Increased font size for the title */
+    margin-bottom: 5px; /* Reduced margin for tighter spacing */
+    font-weight: 800; /* Increased font weight for more emphasis */
+    letter-spacing: 2px; /* Adjusted letter spacing */
+}
+
+.hero-subtitle {
+    font-size: 2rem; /* Increased font size for the subtitle */
+    margin-bottom: 35px; /* Increased margin for more space below the subtitle */
+    margin-top: 0;
+    color: #b0bec5; /* Subtitle color */
+    font-weight: 500; /* Medium font weight for subtitle */
+}
+
+.hero-button-home {
+    padding: 10px 40px; /* Updated padding for button */
+    font-size: 1.2rem; /* Font size for button */
+    color: #ffffff; /* Set text color to white */
+    background-color: var(--buttonGrayColor); /* Set gray background color with 25% opacity */
+    border: none; /* No border */
+    border-radius: 7.5px; /* Updated border radius for rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.3s; /* Transition effect for hover */
+    position: relative; /* Required for positioning the triangle */
+}
+
+/* Triangle Indicator */
+.hero-button-home::after {
+    content: ''; /* Create an empty content for the triangle */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Left side of the triangle */
+    border-right: 5px solid transparent; /* Right side of the triangle */
+    border-top: 5px solid #fff; /* Color of the triangle */
+    position: absolute; /* Positioning relative to the button */
+    bottom: -10px; /* Position below the button */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Centering transformation */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Transition for opacity */
+}
+
+/* Show triangle on button hover */
+.hero-button-home:hover::after {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.hero-button-home:hover {
+    color: #eee; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+    height: calc(100vh - 100px); /* Adjust height as necessary */
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 80px; /* Adjust padding for top and bottom */
+}
+
+.home-title {
+    font-size: 2.5rem; /* You can keep or adjust the font size */
+    padding-bottom: 10px;
+    border-bottom: #f39c12 2px solid ;
+    margin-top: 80px; /* Spacing above title */
+    font-weight: 700; /* Font weight for emphasis */
+    letter-spacing: 2px; /* Letter spacing */
+    text-align: center;
+}
+
+.projects-description {
+    margin-top: 50px;
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    width: 100%; /* Make the description full width */
+    padding: 0;
+    box-sizing: border-box; /* Include padding in width calculations */
+    height: 80%; /* Full height for centering */
+    position: relative; /* Set relative position for absolute child */
+    border: #ffffff60 2px solid ;
+    border-radius: 25px;
+
+}
+
+.project-image {
+    position: absolute;
+    left: 5%;
+    max-width: none; /* Allow the image to retain its original width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border-radius */
+    opacity: .9;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+}
+
+.project-info {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translate(50%, -50%);
+
+    color: #fff; /* Text color */
+}
+
+/* Style for the "ZenSL Optimizer" text */
+.project-info h3 {
+    font-size: 3em; /* Font size */
+    margin-bottom: 0; /* No margin at the bottom */
+}
+
+/* Style for the description "Optimize Your Computer For Gaming." */
+.project-info p {
+
+    margin-top: 0; /* No margin at the top */
+    font-size: 1.2em; /* Slightly larger font size for the paragraph */
+}
+
+
+
+.project-info .os-compability {
+    color: #f39c12;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* Style for the feature boxes section */
+.feature-boxes {
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 2.5%;
+    display: flex;
+    justify-content: space-between; /* Keep space between boxes */
+    align-items: center; /* Center the items vertically */
+    gap: 300px; /* Way bigger gap between each box */
+    flex-wrap: nowrap; /* Prevent wrapping (text stacking) */
+}
+  
+  .feature-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1; /* Make the boxes flex equally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Hover effect */
+    max-width: 350px; /* Limit the box width */
+    min-width: 250px; /* Ensure they don't get too narrow */
+    height: 150px; /* Fix height for all boxes to prevent misalignment */
+}
+  
+  .feature-box:hover {
+    transform: translateY(-5px); /* Hover animation */
+}
+  
+  .feature-box p {
+    font-size: 1.2em; /* Font size for the text */
+    color: #fff;
+    margin-bottom: 10px; /* Add space between the text and icon */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+  
+  .feature-icon {
+    font-size: 2em; /* Increase the icon size */
+    color: #f39c12; /* Icon color */
+}
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .feature-boxes {
+      gap: 100px; /* Adjust gap for smaller screens */
+    }
+}
+  
+  @media (max-width: 768px) {
+    .feature-boxes {
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      gap: 50px; /* Reduce gap on small screens */
+      justify-content: center; /* Center the boxes on smaller screens */
+    }
+  
+    .feature-box {
+      height: auto; /* Remove fixed height on smaller screens */
+    }
+}
+
+/* Download button styles */
+.download-button {
+    opacity: .9;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    padding: 10px 40px;
+    font-size: 1.25em;
+    background-color: #212529;
+    box-shadow: 2px 1px 50px -4px rgba(0, 0, 0, 0.1);
+    border-color: #bcbfc2;
+    color: #bcbfc2;
+    border: solid 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 250px;
+    height: 80px;
+    letter-spacing: 2px;
+}
+
+.download-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}

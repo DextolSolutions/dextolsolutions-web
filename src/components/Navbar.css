@@ -1,0 +1,92 @@
+:root {
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+	--discordButtonColor: #0056b3; /* Darker blue background color */
+	--discordButtonTextColor: #ffffff; /* White text color */
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Space between elements */
+	height: 100px; /* Updated height */
+	padding: 10px 2rem;
+	background-color: #0000007e; /* Removed background color */
+	color: var(--textColor);
+	border-radius: 20px; /* Updated border radius */
+	margin: 10px;
+	border: none; /* Removed the outline completely */
+}
+
+.logo {
+	transform: scale(0.79); /* Scale increase to 0.79 */
+	height: auto; /* Maintain aspect ratio */
+	margin-right: 20px; /* Increased space between logo and text */
+	margin-left: -10px; /* Position adjustment */
+}
+
+.logo-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center text vertically */
+	gap: 2px; /* Reduced gap between stacked text */
+	text-align: center; /* Center the text */
+}
+
+.logo-title {
+	display: flex;
+	font-size: 1.6rem; /* Increased font size for the title */
+	font-weight: 700;
+	color: var(--textColor);
+}
+
+.logo-subtitle {
+	font-size: 1.1rem; /* Increased font size for subtitle */
+	font-weight: 300; /* Light weight for subtitle */
+	color: var(--textColor);
+}
+
+/* Nav links styling */
+.nav-links {
+	display: flex;
+	align-items: center; /* Center align items vertically */
+	gap: 28px; /* Adjusted gap between links and the discord button */
+	margin-left: auto; /* Push nav links to the right */
+}
+
+nav a {
+	color: var(--textColor);
+	text-decoration: none;
+	font-size: 1.4rem; /* Increased font size for nav links */
+	padding: 10px 20px; /* Updated padding for background of hover effect */
+	border-radius: 5px; /* Reduced border radius */
+	transition: 0.3s; /* General transition for all properties */
+}
+
+nav a:hover {
+	color: var(--textColor); /* Maintain text color on hover */
+	background-color: rgba(255, 255, 255, 0.2); /* Decreased opacity for hover effect */
+}
+
+
+/* Join Discord button styles */
+.join-discord {
+	background-color: var(--discordButtonColor); /* Dark blue background */
+	color: var(--discordButtonTextColor); /* White text */
+	border: 2px solid var(--discordButtonColor); /* Dark blue border */
+	border-radius: 10px; /* Rounded corners */
+	padding: 12px 24px; /* Increased padding for the button */
+	cursor: pointer; /* Pointer cursor on hover */
+	font-size: 1.1rem; /* Increased font size */
+	transition: background-color 0.3s, color 0.3s; /* Remove delay for hover transition */
+}
+
+.join-discord:hover {
+	background-color: var(--discordButtonTextColor); /* White background on hover */
+	color: var(--discordButtonColor); /* Dark blue text on hover */
+	border: 2px solid var(--discordButtonColor); /* Keep dark blue border on hover */
+}
+
+.join-discord:focus {
+	outline: none; /* Remove default focus outline */
+}
