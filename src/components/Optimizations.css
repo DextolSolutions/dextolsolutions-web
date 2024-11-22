@@ -51,7 +51,7 @@
 }
 
 .box:hover {
-    background: rgba(0, 0, 0, 0.25); /* Slightly darker background on hover */
+    background: rgba(255, 255, 255, 0.25); /* Slightly darker background on hover */
     transform: translateY(-5px); /* Moves box upward */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Add a shadow on hover */
 }
@@ -64,7 +64,7 @@
 
 .box h3 {
     font-size: 1.8rem; /* Bigger titles */
-    color: #bbb; /* Lighter gray text */
+    color: #f39c12; /* Lighter gray text */
     margin-bottom: 15px;
 }
 
@@ -75,7 +75,7 @@
     line-height: 1.6;
 }
 
-.download-button {
+.download-button-optimizations {
     display: flex; /* Flexbox for centering text inside the button */
     justify-content: center; /* Horizontally center text */
     align-items: center; /* Vertically center text */
@@ -89,9 +89,10 @@
     transition: transform 0.3s, background 0.3s, color 0.3s;
     text-align: center;
     height: 70px; /* Fixed height for consistent appearance */
+    width: 200px;
 }
 
-.download-button:hover {
+.download-button-optimizations:hover {
     background: rgba(0, 0, 0, 0.25); /* Slightly darker background on hover */
     color: #fff; /* White text on hover for better contrast */
 }
