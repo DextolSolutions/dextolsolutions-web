@@ -1,59 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import './Projects.css';
+import './Optimizations.css';
 
 function Projects() {
-  const [typedText, setTypedText] = useState(''); // Text to display
-  const [textIndex, setTextIndex] = useState(0); // Current text index
-  const [isTyping, setIsTyping] = useState(true); // Typing or erasing state
-  const [charIndex, setCharIndex] = useState(0); // Current character index
-
-  const texts = [
-    "Nothing to show here yet!",
-    "Come back later!"
-  ]; // Array of texts
-
-  useEffect(() => {
-    let interval;
-    if (isTyping) {
-      // Typing animation
-      if (charIndex < texts[textIndex].length) {
-        interval = setInterval(() => {
-          setTypedText((prev) => prev + texts[textIndex].charAt(charIndex));
-          setCharIndex(charIndex + 1);
-        }, 100); // Typing speed
-      } else {
-        // Pause after typing the full text
-        setTimeout(() => setIsTyping(false), 2000); // Pause for 2 seconds
-      }
-    } else {
-      // Erasing animation
-      if (charIndex > 0) {
-        interval = setInterval(() => {
-          setTypedText((prev) => prev.slice(0, -1));
-          setCharIndex(charIndex - 1);
-        }, 50); // Erasing speed
-      } else {
-        // Move to the next text
-        setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        setIsTyping(true); // Start typing again
-      }
-    }
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [charIndex, isTyping, textIndex, texts]);
-
   return (
     <div>
       <section className='projects-section'>
         <h1 className="projects-title">OPTIMIZATIONS</h1>
-      </section>
-      <div className="typewriter-container">
-        <div className="typewriter-text">
-          <p className="typewriter">{typedText}</p>
+        <p className="projects-subtitle">Our Optimizations Scripts To Optimize Your Computer</p>
+        <div className="boxes-container">
+          {/* Box 1 */}
+          <div className="box">
+            <i className="fas fa-tachometer-alt box-icon"></i>
+            <h3>Performance Boost</h3>
+            <p>Enhance your computer's speed with this script.</p>
+            <a href="/download/performance-boost" className="download-button">Download</a>
+          </div>
+          {/* Box 2 */}
+          <div className="box">
+            <i className="fas fa-code box-icon"></i>
+            <h3>Code Cleaner</h3>
+            <p>Eliminate unnecessary files and optimize system code efficiency.</p>
+            <a href="/download/code-cleaner" className="download-button">Download</a>
+          </div>
+          {/* Box 3 */}
+          <div className="box">
+            <i className="fas fa-chart-line box-icon"></i>
+            <h3>Resource Monitor</h3>
+            <p>Track and reduce resource usage to maintain peak performance.</p>
+            <a href="/download/resource-monitor" className="download-button">Download</a>
+          </div>
+          {/* Box 4 */}
+          <div className="box">
+            <i className="fas fa-database box-icon"></i>
+            <h3>Data Optimizer</h3>
+            <p>Streamline data storage and minimize redundant files.</p>
+            <a href="/download/data-optimizer" className="download-button">Download</a>
+          </div>
+          {/* Box 5 */}
+          <div className="box">
+            <i className="fas fa-cogs box-icon"></i>
+            <h3>System Tuner</h3>
+            <p>tune system settings for a smoother user experience.</p>
+            <a href="/download/system-tuner" className="download-button">Download</a>
+          </div>
+          {/* Box 6 */}
+          <div className="box">
+            <i className="fas fa-shield-alt box-icon"></i>
+            <h3>Security Enhancer</h3>
+            <p>Boost your system's security to protect against vulnerabilities.</p>
+            <a href="/download/security-enhancer" className="download-button">Download</a>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-
   );
 }
 

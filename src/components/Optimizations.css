@@ -1,61 +1,118 @@
+/* General Section Styling */
 .projects-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 100px); /* Adjust height as necessary */
     color: #fff;
-    border-radius: 25px;
-    text-align: center;
-    padding: 0 80px; /* Adjust padding for top and bottom */
+    padding: 20px;
+    width: 100%; /* Ensures it spans the full width */
 }
 
 .projects-title {
-    font-size: 2.5rem; /* You can keep or adjust the font size */
-    padding-bottom: 10px;
-    border-bottom: #f39c12 2px solid ;
+    font-size: 2.8rem; /* Slightly bigger title */
     color: #fff;
-    margin-top: 80px; /* Spacing above title */
-    font-weight: 700; /* Font weight for emphasis */
-    letter-spacing: 2px; /* Letter spacing */
+    margin-top: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-align: center;
 }
 
-/* Typewriter Section */
-.typewriter-container {
-    position: absolute;
-    top: 50%;
-    left: 50%; /* Adjust this for horizontal positioning */
-    transform: translate(-50%, -50%); /* Vertically centered in the first 100vh */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2; /* Ensure it's above the background sections */
+.projects-subtitle {
+    font-size: 1.5rem; /* Larger subtitle */
+    color: #bbb; /* Subtle text color */
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-.typewriter-text {
-    margin-top: 10px;
+/* Boxes Container */
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fixed layout: 3 boxes per row */
+    gap: 75px; /* Generous space between boxes */
+    width: 90%; /* Stretch boxes across 90% of the page width */
+    max-width: 1400px; /* Ensure content doesn't stretch too much on large screens */
+    margin: 0 auto; /* Center align grid */
+    padding: 20px 0;
+}
+
+/* Individual Box Styling */
+.box {
+    background: transparent; /* Fully transparent by default */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 20px; /* Keep rounded corners */
     text-align: center;
+    padding: 40px; /* Larger padding to make boxes appear bigger */
+    height: 350px; /* Uniform height */
+    display: flex; /* Use flexbox for the box container */
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: space-between; /* Space out elements (title, description, button) */
+    align-items: center; /* Horizontally center all content */
+    transition: transform 0.3s ease-in-out, background 0.3s, box-shadow 0.3s;
 }
 
-/* Typewriter effect */
-.typewriter {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff50;
-    letter-spacing: 1.5px;
-    border-right: 2px solid #fff; /* Cursor effect */
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0; /* Start hidden */
-    animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+.box:hover {
+    background: rgba(0, 0, 0, 0.25); /* Slightly darker background on hover */
+    transform: translateY(-5px); /* Moves box upward */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Add a shadow on hover */
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; } /* Reveal full text */
+.box-icon {
+    font-size: 4rem; /* Bigger icons */
+    color: #f1c40f; /* Bright accent color */
+    margin-bottom: 20px;
 }
 
-@keyframes blink {
-    from, to { border-color: transparent; }
-    50% { border-color: white; }
+.box h3 {
+    font-size: 1.8rem; /* Bigger titles */
+    color: #bbb; /* Lighter gray text */
+    margin-bottom: 15px;
+}
+
+.box p {
+    font-size: 1.2rem; /* Larger description text */
+    color: #bbb; /* Lighter gray text */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.download-button {
+    display: flex; /* Flexbox for centering text inside the button */
+    justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    text-decoration: none;
+    background: transparent; /* Fully transparent by default */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    color: #bbb; /* Lighter gray text */
+    font-size: 1rem;
+    padding: 15px 30px; /* Consistent padding */
+    border-radius: 10px; /* Smoother button shape */
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    text-align: center;
+    height: 70px; /* Fixed height for consistent appearance */
+}
+
+.download-button:hover {
+    background: rgba(0, 0, 0, 0.25); /* Slightly darker background on hover */
+    color: #fff; /* White text on hover for better contrast */
+}
+
+/* Media Query: Adjust for smaller screens */
+@media (max-width: 1024px) {
+    .boxes-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 boxes per row on medium screens */
+    }
+
+    .box {
+        height: 320px; /* Slightly smaller height */
+    }
+}
+
+@media (max-width: 768px) {
+    .boxes-container {
+        grid-template-columns: repeat(1, 1fr); /* Stack boxes vertically on small screens */
+    }
+
+    .box {
+        height: auto; /* Allow flexible height for content */
+    }
 }
