@@ -45,7 +45,7 @@ function Projects() {
   return (
     <div>
       <section className='projects-section'>
-        <h1 className="projects-title">OUR PORJECTS</h1>
+        <h1 className="projects-title">OUR PROJECTS</h1>
       </section>
       <div className="typewriter-container">
         <div className="typewriter-text">

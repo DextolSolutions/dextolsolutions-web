@@ -140,17 +140,26 @@
     position: relative; /* Set relative position for absolute child */
     border: #ffffff60 2px solid ;
     border-radius: 25px;
+    flex-wrap: wrap;
 
 }
+
+.projects-description .project-image{
+    max-width: 50%;  /* Begrenzung der Breite des Bildes */
+    height: auto;
+}
+
 
 .project-image {
     position: absolute;
     left: 5%;
-    max-width: none; /* Allow the image to retain its original width */
+    max-width: 100%; /* Allow the image to retain its original width */
     height: auto; /* Maintain aspect ratio */
+    display: block;
     border-radius: 10px; /* Add border-radius */
     opacity: .9;
     box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    scale: .9;
 }
 
 .project-info {
@@ -160,6 +169,7 @@
     transform: translate(50%, -50%);
 
     color: #fff; /* Text color */
+    flex: 1;
 }
 
 /* Style for the "ZenSL Optimizer" text */
@@ -182,6 +192,17 @@
     letter-spacing: 1px;
     margin-top: 20px;
 }
+
+@media (max-width: 1080px) {
+    .project-image {
+      max-width: 100%; /* Bild nimmt die volle Breite ein */
+    }
+  
+    .projects-description {
+      flex-direction: column; /* Elemente werden vertikal gestapelt */
+    }
+  }
+  
 
 /* Style for the feature boxes section */
 .feature-boxes {

@@ -72,7 +72,7 @@ function Home() {
         <div className="projects-description">
           <img src={projectImage} alt="Project Thumbnail" className="project-image" />
           <div className="project-info">
-              <h3>ZenSL Optimizer</h3>
+              <h3>ZenSL Lite</h3>
               <p>Optimize Your Computer For Gaming.</p>
 
               <button className="download-button">Download</button>
