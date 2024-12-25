@@ -140,8 +140,16 @@
     position: relative; /* Set relative position for absolute child */
     border: #ffffff60 2px solid ;
     border-radius: 25px;
+    transition: all .2s;
     flex-wrap: wrap;
 
+}
+
+/* Highlight and transform effects for the project description box */
+.projects-description:hover {
+    border-color: #f39c12; /* Highlight the border with a bright color */
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6); /* Add a glowing border effect */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transition */
 }
 
 .projects-description .project-image{
@@ -149,17 +157,64 @@
     height: auto;
 }
 
+/* FADE TEXTS ON HOVER FOR => projects-description */
+.fade-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Increase space between texts */
+}
+
+.fade-text {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Highlighted white color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
+    opacity: 0; /* Start fully hidden */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeDown 0.8s ease-out forwards;
+}
+
+/* Keyframes for the fade-down animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+
 
 .project-image {
     position: absolute;
     left: 5%;
-    max-width: 100%; /* Allow the image to retain its original width */
+    max-width: 100%; /* Allow the image to scale responsively */
     height: auto; /* Maintain aspect ratio */
     display: block;
-    border-radius: 10px; /* Add border-radius */
-    opacity: .9;
-    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
-    scale: .9;
+    border-radius: 10px; /* Smooth corners */
+    opacity: 0.9; /* Slight transparency */
+    transform: perspective(1000px) rotateX(15deg) rotateY(15deg); /* Rotate to point towards the right */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+    border: #ffffff50 1px solid;
+    scale: 0.95; /* Slightly smaller for depth perception */
+
+    /* Anti-aliasing enhancements */
+    image-rendering: auto; /* Default for high-quality rendering */
+    backface-visibility: hidden; /* Prevents aliasing by hiding back faces during the 3D transformation */
+    -webkit-font-smoothing: antialiased; /* Improve anti-aliasing on webkit-based browsers */
+    -moz-osx-font-smoothing: grayscale; /* Additional anti-aliasing for macOS browsers */
+    filter: contrast(110%) saturate(105%); /* Boost contrast and saturation for better visual clarity */
+    will-change: transform, filter; /* Optimize rendering for transformations */
 }
 
 .project-info {

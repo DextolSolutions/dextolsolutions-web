@@ -51,6 +51,25 @@ function Home() {
     }
   };
 
+  const [hovered, setHovered] = useState(false);
+
+  const fadeTexts = ["GUARANTEED STABILITY", "PERFORMANCE FOR EVERY GAME", "LEVEL UP YOUR GAMEPLAY"]; // Texts to display on hover
+
+  const downloadInstaller = () => {
+    // Create a temporary anchor element to trigger the download
+    const link = document.createElement('a');
+    link.href = 'https://link-center.net/1239691/zensl-optimizer'; // URL to the installer
+    link.download = 'ZenslOptimizer.exe'; // Suggested file name
+    link.target = '_blank'; // Open in a new tab for safety
+  
+    // Append the link to the body temporarily and trigger the click
+    document.body.appendChild(link);
+    link.click();
+  
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
+  
   return (
     <>
       {/* Avatar Section */}
@@ -69,17 +88,34 @@ function Home() {
       <section id="projects" className="home-section">   
         <h1 className="home-title">RECENT PROJECT</h1>
         
-        <div className="projects-description">
+        <div 
+          className="projects-description" 
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
           <img src={projectImage} alt="Project Thumbnail" className="project-image" />
           <div className="project-info">
               <h3>ZenSL Lite</h3>
               <p>Optimize Your Computer For Gaming.</p>
-
-              <button className="download-button">Download</button>
-
+              <button className="download-button" onClick={downloadInstaller}>Optimize Now</button>
               <p className='os-compability'>Windows 10 / 11</p>
           </div>
           
+          {/* Fade-down texts */}
+          {hovered && (
+              <div className="fade-texts">
+                  {fadeTexts.map((text, index) => (
+                      <p
+                          key={index}
+                          className="fade-text"
+                          style={{ animationDelay: `${index * 0.5}s` }} // Add delay for each text
+                      >
+                          {text}
+                      </p>
+                  ))}
+              </div>
+          )}
+
           <div className="feature-boxes">
             <div className="feature-box">
               <p>ONE CLICK</p>
