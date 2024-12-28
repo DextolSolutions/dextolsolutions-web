@@ -13,16 +13,15 @@
 }
 
 ::-webkit-scrollbar {
-    display:none
+    display: none;
 }
-    
 
 body {
     background-color: #000; /* Solid black background */
-    overflow-y: auto; /* Ermöglicht vertikales Scrollen */
+    overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden;
     margin: 0;
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Ensure full viewport height on all screens */
     position: relative; /* Positioning for stars */
 }
 
@@ -31,41 +30,80 @@ body {
     z-index: 1; /* Ensure content is above stars */
 }
 
+/* Star Styling */
 .star {
-  z-index: 0;
-  position: absolute;
-  width: 2px; /* Default star size */
-  height: 2px; /* Default star size */
-  background: #fff; /* Star color */
-  box-shadow: 0 0 10px #fff; /* Glow effect */
-  border-radius: 50%; /* Make it round */
-  opacity: 0; /* Start as invisible */
-  animation: moveStar linear; /* Animation for stars */
+    z-index: 0;
+    position: absolute;
+    width: 2px; /* Default star size */
+    height: 2px; /* Default star size */
+    background: #fff; /* Star color */
+    box-shadow: 0 0 10px #fff; /* Glow effect */
+    border-radius: 50%; /* Make it round */
+    opacity: 0; /* Start as invisible */
+    animation: moveStar linear; /* Animation for stars */
 }
 
 @keyframes moveStar {
-  0% {
-      transform: translate(-50px, 50px); /* Start position */
-      opacity: 0; /* Start invisible */
-  }
-  10% {
-      opacity: 1; /* Fade in */
-  }
-  90% {
-      opacity: 1; /* Stay visible */
-  }
-  100% {
-      transform: translate(500px, -500px); /* Move diagonally */
-      opacity: 0; /* Fade out */
-  }
+    0% {
+        transform: translate(-50px, 50px); /* Start position */
+        opacity: 0; /* Start invisible */
+    }
+    10% {
+        opacity: 1; /* Fade in */
+    }
+    90% {
+        opacity: 1; /* Stay visible */
+    }
+    100% {
+        transform: translate(500px, -500px); /* Move diagonally */
+        opacity: 0; /* Fade out */
+    }
 }
 
+/* Container for stars */
 .stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top: 0; /* Ensure stars start from the top */
-  left: 0; /* Ensure stars start from the left */
-  z-index: 0; /* Background layer */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0; /* Ensure stars start from the top */
+    left: 0; /* Ensure stars start from the left */
+    z-index: 0; /* Background layer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .star {
+        width: 1.5px; /* Slightly smaller star size on smaller screens */
+        height: 1.5px;
+    }
+
+    @keyframes moveStar {
+        0% {
+            transform: translate(-30px, 30px); /* Adjusted start position for smaller screens */
+            opacity: 0;
+        }
+        100% {
+            transform: translate(300px, -300px); /* Shorter movement distance for smaller screens */
+            opacity: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .star {
+        width: 1px; /* Further reduce star size for very small screens */
+        height: 1px;
+    }
+
+    @keyframes moveStar {
+        0% {
+            transform: translate(-20px, 20px); /* Adjusted start position for extra-small screens */
+            opacity: 0;
+        }
+        100% {
+            transform: translate(200px, -200px); /* Shorter movement distance for extra-small screens */
+            opacity: 0;
+        }
+    }
 }

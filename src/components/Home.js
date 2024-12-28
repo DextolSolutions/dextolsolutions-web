@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Home.css';
+import './Untitled-1.css';
 import projectImage from '../assets/thumb.png'; // Importing the project image
 import { FaMousePointer, FaUndo, FaShieldAlt } from 'react-icons/fa'; // Importing icons from react-icons
 
@@ -13,6 +13,8 @@ function Home() {
     "Click on 'Show Projects' to Download ZenSL!",
     "Welcome to DextolSolutions!"
   ]; // Array of texts
+
+  const fadeTexts = ["","",""]
 
   useEffect(() => {
     let interval;
@@ -52,8 +54,6 @@ function Home() {
   };
 
   const [hovered, setHovered] = useState(false);
-
-  const fadeTexts = ["GUARANTEED STABILITY", "PERFORMANCE FOR EVERY GAME", "LEVEL UP YOUR GAMEPLAY"]; // Texts to display on hover
 
   const downloadInstaller = () => {
     // Create a temporary anchor element to trigger the download
@@ -101,7 +101,7 @@ function Home() {
               <p className='os-compability'>Windows 10 / 11</p>
           </div>
           
-          {/* Fade-down texts */}
+          {/* Fade-down texts
           {hovered && (
               <div className="fade-texts">
                   {fadeTexts.map((text, index) => (
@@ -114,7 +114,7 @@ function Home() {
                       </p>
                   ))}
               </div>
-          )}
+          )} */}
 
           <div className="feature-boxes">
             <div className="feature-box">

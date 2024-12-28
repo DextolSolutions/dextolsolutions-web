@@ -1,0 +1,334 @@
+:root {
+    --buttonGrayColor: rgba(128, 128, 128, 0.25); /* Gray background color with 25% opacity */
+}
+
+/* Avatar Section */
+.avatar-container {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.avatar-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Typewriter Effect */
+.typewriter {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff50;
+    letter-spacing: 1.5px;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    color: #eee;
+    text-align: center;
+    padding: 30px;
+    transform: scale(1.05);
+    position: relative;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #b0bec5;
+    font-weight: 500;
+}
+
+.hero-button-home {
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: var(--buttonGrayColor);
+    border: none;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.hero-button-home::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hero-button-home:hover::after {
+    opacity: 1;
+}
+
+.hero-button-home:hover {
+    color: #eee;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0 80px;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    border-bottom: #f39c12 2px solid;
+    margin-top: 80px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Projects Section */
+.projects-description {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    height: 80%;
+    position: relative;
+    border: #ffffff60 2px solid;
+    border-radius: 25px;
+    transition: all 0.2s;
+    flex-wrap: wrap;
+}
+
+.projects-description:hover {
+    border-color: #f39c12;
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.project-image {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.9;
+    transform: perspective(1000px) rotateX(15deg) rotateY(15deg);
+    border: #ffffff50 1px solid;
+    scale: 0.75;
+}
+
+.project-info {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translate(50%, -50%);
+    color: #fff;
+}
+
+.project-info h3 {
+    font-size: 3rem;
+}
+
+.project-info p {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.project-info .os-compability {
+    color: #f39c12;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* Feature Boxes */
+.feature-boxes {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the feature boxes horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 300px; /* Adjust gap between boxes */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    width: 100%; /* Make sure it spans the entire width of the container */
+    margin: 20px auto; /* Center the feature-boxes within the container */
+    padding: 10px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding in size calculations */
+}
+
+.feature-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Hover effect */
+    max-width: 300px; /* Restrict maximum width of each box */
+    min-width: 250px; /* Ensure they don't get too narrow */
+    height: 150px; /* Fixed height for consistent layout */
+}
+
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+/* Download Button */
+.download-button {
+    opacity: 0.9;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    padding: 10px 40px;
+    font-size: 1.25rem;
+    background-color: #212529;
+    box-shadow: 2px 1px 50px -4px rgba(0, 0, 0, 0.1);
+    border-color: #bcbfc2;
+    color: #bcbfc2;
+    border: solid 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 250px;
+    height: 80px;
+    letter-spacing: 2px;
+}
+
+.download-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-button-home {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    .projects-description {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+
+    .feature-boxes {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .feature-box {
+        height: auto;
+    }
+}
+
+
+
+/* MANUAL ADJUSTMENTS /
+
+/* FADE TEXTS ON HOVER FOR => projects-description */
+.fade-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Increase space between texts */
+}
+
+.fade-text {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Highlighted white color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
+    opacity: 0; /* Start fully hidden */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeDown 0.8s ease-out forwards;
+}
+
+/* Keyframes for the fade-down animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
