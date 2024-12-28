@@ -138,3 +138,8 @@
 .about-text a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+
+.align-left {
+    text-align: left;
+}
