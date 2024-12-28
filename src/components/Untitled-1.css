@@ -155,14 +155,23 @@
 .project-image {
     position: relative;
     top: 10%;
-    left: 5%;
+    left: 10%;
     max-width: 50%;
     height: auto;
-    border-radius: 10px;
     opacity: 0.9;
     transform: perspective(1000px) rotateX(15deg) rotateY(15deg);
-    border: #ffffff50 1px solid;
-    scale: 0.75;
+    border-radius: 10px;
+
+    max-height: 75%;
+
+    /* Anti-aliasing enhancements */
+    image-rendering: auto; /* Default for high-quality rendering */
+    backface-visibility: hidden; /* Prevents aliasing by hiding back faces during the 3D transformation */
+    -webkit-font-smoothing: antialiased; /* Improve anti-aliasing on webkit-based browsers */
+    -moz-osx-font-smoothing: grayscale; /* Additional anti-aliasing for macOS browsers */
+    filter: contrast(110%) saturate(105%); /* Boost contrast and saturation for better visual clarity */
+    will-change: transform, filter; /* Optimize rendering for transformations */
+
 }
 
 .project-info {
@@ -291,44 +300,22 @@
     .feature-box {
         height: auto;
     }
-}
 
-
-
-/* MANUAL ADJUSTMENTS /
-
-/* FADE TEXTS ON HOVER FOR => projects-description */
-.fade-texts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Increase space between texts */
-}
-
-.fade-text {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff; /* Highlighted white color */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
-    opacity: 0; /* Start fully hidden */
-    transform: translateY(-20px); /* Start slightly above */
-    animation: fadeDown 0.8s ease-out forwards;
-}
-
-/* Keyframes for the fade-down animation */
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px); /* Start position */
+    .project-image {
+        max-height: 60%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* End position */
+}
+
+@media (max-width: 1920px) {
+    .project-image {
+        height: 50%;
+
+        /* Anti-aliasing enhancements */
+        image-rendering: auto; /* Default for high-quality rendering */
+        backface-visibility: hidden; /* Prevents aliasing by hiding back faces during the 3D transformation */
+        -webkit-font-smoothing: antialiased; /* Improve anti-aliasing on webkit-based browsers */
+        -moz-osx-font-smoothing: grayscale; /* Additional anti-aliasing for macOS browsers */
+        filter: contrast(110%) saturate(105%); /* Boost contrast and saturation for better visual clarity */
+        will-change: transform, filter; /* Optimize rendering for transformations */
     }
 }
