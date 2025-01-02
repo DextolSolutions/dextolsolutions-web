@@ -6,241 +6,179 @@
 .avatar-container {
     position: absolute;
     top: 25%;
-    left: 5%; /* Adjust this for horizontal positioning */
-    transform: translateY(-25%); /* Vertically centered in the first 100vh */
+    left: 5%;
+    transform: translateY(-25%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2; /* Ensure it's above the background sections */
+    z-index: 2;
 }
+
 .avatar-text {
     margin-top: 10px;
     text-align: center;
 }
 
-/* Typewriter effect */
+/* Typewriter Effect */
 .typewriter {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     color: #ffffff50;
     letter-spacing: 1.5px;
-    border-right: 2px solid #fff; /* Cursor effect */
+    border-right: 2px solid #fff;
     white-space: nowrap;
     overflow: hidden;
-    width: 0; /* Start hidden */
+    width: 0;
     animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 100%; } /* Reveal full text */
+    to { width: 100%; }
 }
 
 @keyframes blink {
     from, to { border-color: transparent; }
     50% { border-color: white; }
 }
+
+/* Hero Section */
 .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 100px);
-    color: #eee; /* Text color */
+    color: #eee;
     text-align: center;
-    padding: 30px; /* Slightly reduced padding for better scaling */
-    transform: scale(1.05); /* Adjusted scale for the section */
-    position: relative; /* Required for positioning the triangle */
+    padding: 30px;
+    transform: scale(1.05);
+    position: relative;
 }
 
 .hero-title {
-    font-size: 4rem; /* Increased font size for the title */
-    margin-bottom: 5px; /* Reduced margin for tighter spacing */
-    font-weight: 800; /* Increased font weight for more emphasis */
-    letter-spacing: 2px; /* Adjusted letter spacing */
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .hero-subtitle {
-    font-size: 2rem; /* Increased font size for the subtitle */
-    margin-bottom: 35px; /* Increased margin for more space below the subtitle */
-    margin-top: 0;
-    color: #b0bec5; /* Subtitle color */
-    font-weight: 500; /* Medium font weight for subtitle */
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #b0bec5;
+    font-weight: 500;
 }
 
 .hero-button-home {
-    padding: 10px 40px; /* Updated padding for button */
-    font-size: 1.2rem; /* Font size for button */
-    color: #ffffff; /* Set text color to white */
-    background-color: var(--buttonGrayColor); /* Set gray background color with 25% opacity */
-    border: none; /* No border */
-    border-radius: 7.5px; /* Updated border radius for rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: 0.3s; /* Transition effect for hover */
-    position: relative; /* Required for positioning the triangle */
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: var(--buttonGrayColor);
+    border: none;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
 }
 
-/* Triangle Indicator */
 .hero-button-home::after {
-    content: ''; /* Create an empty content for the triangle */
+    content: '';
     width: 0;
     height: 0;
-    border-left: 5px solid transparent; /* Left side of the triangle */
-    border-right: 5px solid transparent; /* Right side of the triangle */
-    border-top: 5px solid #fff; /* Color of the triangle */
-    position: absolute; /* Positioning relative to the button */
-    bottom: -10px; /* Position below the button */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Centering transformation */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s; /* Transition for opacity */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-/* Show triangle on button hover */
 .hero-button-home:hover::after {
-    opacity: 1; /* Make it visible on hover */
+    opacity: 1;
 }
 
 .hero-button-home:hover {
-    color: #eee; /* Change text color on hover */
-    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    color: #eee;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Home Section */
 .home-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center items vertically */
-    height: calc(100vh - 100px); /* Adjust height as necessary */
+    justify-content: center;
+    height: calc(100vh - 100px);
     color: #fff;
     border-radius: 25px;
     text-align: center;
-    padding: 0 80px; /* Adjust padding for top and bottom */
+    padding: 0 80px;
 }
 
 .home-title {
-    font-size: 2.5rem; /* You can keep or adjust the font size */
+    font-size: 2.5rem;
     padding-bottom: 10px;
-    border-bottom: #f39c12 2px solid ;
-    margin-top: 80px; /* Spacing above title */
-    font-weight: 700; /* Font weight for emphasis */
-    letter-spacing: 2px; /* Letter spacing */
+    border-bottom: #f39c12 2px solid;
+    margin-top: 80px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-align: center;
 }
 
+/* Projects Section */
 .projects-description {
     margin-top: 50px;
-    display: flex; /* Use flexbox for horizontal alignment */
-    align-items: center; /* Center align items vertically */
-    justify-content: flex-start; /* Align items to the start */
-    width: 100%; /* Make the description full width */
-    padding: 0;
-    box-sizing: border-box; /* Include padding in width calculations */
-    height: 80%; /* Full height for centering */
-    position: relative; /* Set relative position for absolute child */
-    border: #ffffff60 2px solid ;
-    border-radius: 25px;
-    transition: all .2s;
-    flex-wrap: wrap;
-
-}
-
-/* Highlight and transform effects for the project description box */
-.projects-description:hover {
-    border-color: #f39c12; /* Highlight the border with a bright color */
-    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6); /* Add a glowing border effect */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transition */
-}
-
-.projects-description .project-image{
-    max-width: 50%;  /* Begrenzung der Breite des Bildes */
-    height: auto;
-}
-
-/* FADE TEXTS ON HOVER FOR => projects-description */
-.fade-texts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 20px; /* Increase space between texts */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ffffff60;
+    border-radius: 25px;
+    gap: 20px;
+    transition: all 0.3s ease;
+    height: 80%;
+    position: relative;
 }
 
-.fade-text {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff; /* Highlighted white color */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
-    opacity: 0; /* Start fully hidden */
-    transform: translateY(-20px); /* Start slightly above */
-    animation: fadeDown 0.8s ease-out forwards;
+.projects-description:hover {
+    border-color: #f39c12;
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
 }
-
-/* Keyframes for the fade-down animation */
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px); /* Start position */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* End position */
-    }
-}
-
-
 
 .project-image {
-    position: absolute;
-    left: 5%;
-    max-width: 100%; /* Allow the image to scale responsively */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    border-radius: 10px; /* Smooth corners */
-    opacity: 0.9; /* Slight transparency */
-    transform: perspective(1000px) rotateX(15deg) rotateY(15deg); /* Rotate to point towards the right */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
-    border: #ffffff50 1px solid;
-    scale: 0.95; /* Slightly smaller for depth perception */
-
-    /* Anti-aliasing enhancements */
-    image-rendering: auto; /* Default for high-quality rendering */
-    backface-visibility: hidden; /* Prevents aliasing by hiding back faces during the 3D transformation */
-    -webkit-font-smoothing: antialiased; /* Improve anti-aliasing on webkit-based browsers */
-    -moz-osx-font-smoothing: grayscale; /* Additional anti-aliasing for macOS browsers */
-    filter: contrast(110%) saturate(105%); /* Boost contrast and saturation for better visual clarity */
-    will-change: transform, filter; /* Optimize rendering for transformations */
+    max-width: 45%;  /* Prevents the image from stretching too much */
+    height: auto;
+    border-radius: 10px;
+    filter: contrast(110%) saturate(105%);
+    opacity: 0.9;
+    transform: perspective(1000px) rotateX(15deg) rotateY(15deg);
+    border-radius: 10px;
+    margin: 5% 0 0 10%;  /* Adds some space around the image */
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    right: 25%;
-    transform: translate(50%, -50%);
-
-    color: #fff; /* Text color */
-    flex: 1;
+    color: #fff;
+    max-width: 45%;  /* Prevents the text block from stretching too much */
+    margin: 10% 10% 0 0;  /* Adds some space around the image */
 }
 
-/* Style for the "ZenSL Optimizer" text */
 .project-info h3 {
-    font-size: 3em; /* Font size */
-    margin-bottom: 0; /* No margin at the bottom */
+    font-size: 3rem;
 }
 
-/* Style for the description "Optimize Your Computer For Gaming." */
 .project-info p {
-
-    margin-top: 0; /* No margin at the top */
-    font-size: 1.2em; /* Slightly larger font size for the paragraph */
+    margin-top: 0;
+    font-size: 1.2rem;
 }
-
-
 
 .project-info .os-compability {
     color: #f39c12;
@@ -248,102 +186,125 @@
     margin-top: 20px;
 }
 
-@media (max-width: 1080px) {
-    .project-image {
-      max-width: 100%; /* Bild nimmt die volle Breite ein */
-    }
-  
-    .projects-description {
-      flex-direction: column; /* Elemente werden vertikal gestapelt */
-    }
-  }
-  
-
-/* Style for the feature boxes section */
+/* Feature Boxes */
 .feature-boxes {
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 2.5%;
     display: flex;
-    justify-content: space-between; /* Keep space between boxes */
-    align-items: center; /* Center the items vertically */
-    gap: 300px; /* Way bigger gap between each box */
-    flex-wrap: nowrap; /* Prevent wrapping (text stacking) */
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    flex-wrap: wrap;
+    width: 100%;
 }
-  
-  .feature-box {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    flex: 1; /* Make the boxes flex equally */
+
+.feature-box {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 300px;
+    min-width: 250px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease; /* Hover effect */
-    max-width: 350px; /* Limit the box width */
-    min-width: 250px; /* Ensure they don't get too narrow */
-    height: 150px; /* Fix height for all boxes to prevent misalignment */
-}
-  
-  .feature-box:hover {
-    transform: translateY(-5px); /* Hover animation */
-}
-  
-  .feature-box p {
-    font-size: 1.2em; /* Font size for the text */
-    color: #fff;
-    margin-bottom: 10px; /* Add space between the text and icon */
-    white-space: nowrap; /* Prevent text wrapping */
-}
-  
-  .feature-icon {
-    font-size: 2em; /* Increase the icon size */
-    color: #f39c12; /* Icon color */
-}
-  
-  /* Responsive Design */
-  @media (max-width: 1200px) {
-    .feature-boxes {
-      gap: 100px; /* Adjust gap for smaller screens */
-    }
-}
-  
-  @media (max-width: 768px) {
-    .feature-boxes {
-      flex-wrap: wrap; /* Allow wrapping for smaller screens */
-      gap: 50px; /* Reduce gap on small screens */
-      justify-content: center; /* Center the boxes on smaller screens */
-    }
-  
-    .feature-box {
-      height: auto; /* Remove fixed height on smaller screens */
-    }
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* Download button styles */
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+/* Download Button */
 .download-button {
-    opacity: .9;
     margin-top: 25px;
-    font-family: 'Poppins', sans-serif;
-    text-transform: capitalize;
-    transition: all 0.2s;
     padding: 10px 40px;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     background-color: #212529;
-    box-shadow: 2px 1px 50px -4px rgba(0, 0, 0, 0.1);
-    border-color: #bcbfc2;
     color: #bcbfc2;
-    border: solid 2px;
+    border: 2px solid #bcbfc2;
     border-radius: 2px;
-    cursor: pointer;
     width: 250px;
     height: 80px;
     letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .2s;
+    opacity: 0.9;
 }
 
 .download-button:hover {
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-button-home {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    .projects-description {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-image,
+    .project-info {
+        max-width: 100%;
+    }
+
+    .feature-boxes {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .feature-box {
+        height: auto;
+    }
+
+    .project-image {
+        max-height: 60%;
+    }
+}
+
+@media (max-width: 1920px) {
+    .projects-description {
+        margin-bottom: 100px;
+    }
+
+    .project-info {
+        scale: .9;
+        margin: 50px 50px 0 0;
+    }
+
+    .project-image {
+        scale: .9;
+        margin: 0 0 0 100px;
+    }
+
+    .feature-boxes {
+        scale: .9;
+        flex-wrap: nowrap;
+        text-wrap: nowrap;
+    }
 }

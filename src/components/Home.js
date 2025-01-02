@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Untitled-1.css';
+import './Home.css';
 import projectImage from '../assets/thumb.png'; // Importing the project image
 import { FaMousePointer, FaUndo, FaShieldAlt } from 'react-icons/fa'; // Importing icons from react-icons
 
