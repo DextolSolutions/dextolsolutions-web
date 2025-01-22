@@ -10,11 +10,11 @@ function About() {
         <h1 className="about-title">ABOUT US</h1>
       </section>
       <section className="hero-section hero-section-2">
-        <h1 className="hero-title">DextolSolutions</h1>
+        {/* <h1 className="hero-title">DextolSolutions</h1>
         <h2 className="hero-subtitle">Coding is our Hobby</h2>
-        <div className="hero-separator"></div>
+        <div className="hero-separator"></div> */}
         
-        {/* Button Container */}
+        {/* Button Container
         <div className="button-container">
           <button className="hero-button-about">
             <MdHelpOutline className="button-icon" /> FAQ
@@ -25,7 +25,7 @@ function About() {
           <button className="hero-button-about">
             <FiAlertTriangle className="button-icon" /> Report an Issue
           </button>
-        </div>
+        </div> */}
       </section>
 
       <section className="about-content-section">
@@ -44,7 +44,7 @@ function About() {
         {/* Stacked Subheadings Container */}
         <div className="subheading-wrapper">
           {/* Separator */}
-          <div className="middle-separator"></div>
+          {/* <div className="middle-separator"></div> */}
           <h2 className="about-subheading">IMPRESSIUM</h2>
           <p className="about-text align-left">
           E-Mail: <a href="mailto:dextolbuisness@gmail.com">dextolbuisness@gmail.com</a><br/>E-Mail Operator: <a href="mailto:navske@icloud.com">navske@icloud.com</a>

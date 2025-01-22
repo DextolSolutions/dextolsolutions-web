@@ -10,8 +10,8 @@ function Home() {
   const [charIndex, setCharIndex] = useState(0); // Current character index
 
   const texts = [
-    "Click on 'Show Projects' to Download ZenSL!",
-    "Welcome to DextolSolutions!"
+    "Welcome to DextolSolutions!",
+    "Try out ZenSL Optimizer Now!"
   ]; // Array of texts
 
   const fadeTexts = ["","",""]

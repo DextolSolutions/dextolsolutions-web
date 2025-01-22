@@ -72,7 +72,8 @@
     display: flex;
     align-items: flex-start; /* Align items to the start of the flex container */
     justify-content: center; /* Center items horizontally */
-    padding: 40px; /* Padding around the content */
+    padding: 40px;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     border-radius: 15px; /* Rounded corners */
     max-width: 1500px; /* Increase max width for better readability */

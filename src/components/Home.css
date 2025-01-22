@@ -288,6 +288,9 @@
 }
 
 @media (max-width: 1920px) {
+    .typewriter {
+    }
+
     .projects-description {
         margin-bottom: 100px;
     }
