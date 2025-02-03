@@ -1,73 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
 <ArrayOfProfile>
   <Profile>
-    <ProfileName>Base Profile</ProfileName>
+    <ProfileName>Optimized Base Profile</ProfileName>
     <Executeables />
     <Settings>
       <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>390467</SettingID>
-        <SettingValue>2</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Texture filtering - Negative LOD bias</SettingNameInfo>
         <SettingID>1686376</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Preferred refresh rate</SettingNameInfo>
-        <SettingID>6600001</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable sample interleaving (MFAA)</SettingNameInfo>
-        <SettingID>10011052</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>0</SettingValue> 
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
         <SettingNameInfo>Texture filtering - Quality</SettingNameInfo>
         <SettingID>13510289</SettingID>
-        <SettingValue>20</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Texture filtering - Anisotropic sample optimization</SettingNameInfo>
-        <SettingID>15151633</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>269192926</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Anisotropic filtering setting</SettingNameInfo>
-        <SettingID>270426537</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Power management mode</SettingNameInfo>
-        <SettingID>274197361</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>0</SettingValue> 
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
         <SettingNameInfo>Enable FXAA</SettingNameInfo>
         <SettingID>276089202</SettingID>
+        <SettingValue>0</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Threaded Optimization</SettingNameInfo>
+        <SettingID>6587396</SettingID>
+        <SettingValue>1</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Triple Buffering</SettingNameInfo>
+        <SettingID>6587398</SettingID>
+        <SettingValue>1</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Vertical Sync</SettingNameInfo>
+        <SettingID>6512623</SettingID>
+        <SettingValue>0</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Power management mode</SettingNameInfo>
+        <SettingID>274197361</SettingID>
+        <SettingValue>1</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Anisotropic filtering setting</SettingNameInfo>
+        <SettingID>270426537</SettingID>
+        <SettingValue>16</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Trilinear optimization</SettingNameInfo>
+        <SettingID>1686378</SettingID>
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>FRL Low Latency</SettingNameInfo>
+        <SettingNameInfo>Ambient Occlusion</SettingNameInfo>
+        <SettingID>302603</SettingID>
+        <SettingValue>2</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Maximum pre-rendered frames</SettingNameInfo>
+        <SettingID>6512624</SettingID>
+        <SettingValue>1</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Shader Cache</SettingNameInfo>
+        <SettingID>6597520</SettingID>
+        <SettingValue>1</SettingValue> 
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Low Latency Mode</SettingNameInfo>
         <SettingID>277041152</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>1</SettingValue> 
         <ValueType>Dword</ValueType>
       </ProfileSetting>
     </Settings>

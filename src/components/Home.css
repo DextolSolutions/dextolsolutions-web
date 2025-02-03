@@ -175,6 +175,16 @@
     font-size: 3rem;
 }
 
+.version-badge {
+    background: rgba(255, 159, 32, 0.15);
+    border-radius: 4px;
+    color: #ff9f20;
+    font-size: 2rem;
+    padding: 2px 8px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
 .project-info p {
     margin-top: 0;
     font-size: 1.2rem;
@@ -227,25 +237,37 @@
 
 /* Download Button */
 .download-button {
-    margin-top: 25px;
-    padding: 10px 40px;
-    font-size: 1.25rem;
-    background-color: #212529;
-    color: #bcbfc2;
-    border: 2px solid #bcbfc2;
-    border-radius: 2px;
-    width: 250px;
-    height: 80px;
-    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgba(255, 159, 32, 0.8) 0%, rgba(255, 127, 0, 0.8) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
     cursor: pointer;
-    transition: all .2s;
-    opacity: 0.9;
-}
-
-.download-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
-}
+    font-family: 'Poppins Regular';
+    font-size: 1.25em;
+    height: 60px;
+    letter-spacing: 0.5px;
+    margin: 30px auto 0;
+    padding: 0 40px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+  }
+  
+  .download-button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transition: all 0.3s;
+  }
+  
+  .download-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 159, 32, 0.3);
+  }
+  
+  .neon-hover:hover:not(:disabled) {
+    filter: drop-shadow(0 0 8px rgba(255, 159, 32, 0.5));
+  }
+  
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

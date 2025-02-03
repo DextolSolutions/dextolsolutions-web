@@ -95,7 +95,7 @@ function Home() {
         >
           <img src={projectImage} alt="Project Thumbnail" className="project-image" />
           <div className="project-info">
-              <h3>ZenSL Lite</h3>
+              <h3>ZenSL <span className="version-badge">Lite</span></h3>
               <p>Optimize Your Computer For Gaming.</p>
               <button className="download-button" onClick={downloadInstaller}>Optimize Now</button>
               <p className='os-compability'>Windows 10 / 11</p>
