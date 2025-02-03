@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdHelpOutline } from "react-icons/md";
 import { FiUsers, FiAlertTriangle } from "react-icons/fi";
+import { FaDiscord, FaYoutube, FaTwitter, FaGithub } from "react-icons/fa"; // Import Font Awesome icons
 import './About.css';
 
 function About() {
@@ -39,8 +40,6 @@ function About() {
           </p>
         </div>
 
-
-
         {/* Stacked Subheadings Container */}
         <div className="subheading-wrapper">
           {/* Separator */}
@@ -52,11 +51,21 @@ function About() {
           <p className="about-text">Operator: DextolReiniger</p>
           <p className="about-text">Address: Zwenkauer Str. 15, 04420 Markranstädt, Germany</p>
 
-          <h2 className="about-subheading">TERMS OF SERVICE</h2>
-          <p className="about-text">
-            Links: 
-            <a href="https://dextolsolutions.com/about/legal/zensl-license-agreement" target="_blank" rel="noopener noreferrer"> ZenSL License Agreement</a>
-          </p>
+          <h2 className="about-subheading">OUR SOCIALS</h2>
+          <div className="social-icons">
+            <a href="https://discord.com/invite/jTpB2VZZ4q" target="_blank" rel="noopener noreferrer" className="social-icon discord">
+              <FaDiscord />
+            </a>
+            <a href="https://www.youtube.com/@DextolDasMensch" target="_blank" rel="noopener noreferrer" className="social-icon youtube">
+              <FaYoutube />
+            </a>
+            <a href="https://twitter.com/@DextolSolutions" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
+              <FaTwitter />
+            </a>
+            <a href="https://github.com/DextolReiniger" target="_blank" rel="noopener noreferrer" className="social-icon github">
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </section>
     </div>

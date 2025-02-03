@@ -144,3 +144,38 @@
 .align-left {
     text-align: left;
 }
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Small gap between icons */
+    margin-top: 10px; /* Space above the icons */
+  }
+  
+  /* Social Icon Styling */
+  .social-icon {
+    font-size: 2rem; /* Size of the icons */
+    color: #fff; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Discord Icon Hover Color */
+  .social-icon.discord:hover {
+    color: #7289da; /* Discord brand color */
+  }
+  
+  /* YouTube Icon Hover Color */
+  .social-icon.youtube:hover {
+    color: #ff0000; /* YouTube brand color */
+  }
+  
+  /* Twitter Icon Hover Color */
+  .social-icon.twitter:hover {
+    color: #1da1f2; /* Twitter brand color */
+  }
+  
+  /* GitHub Icon Hover Color */
+  .social-icon.github:hover {
+    color: #6e5494; /* GitHub brand color */
+  }
