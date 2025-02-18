@@ -1,10 +1,8 @@
 {
-    "version": "2.0.0",
+    "version": "2.2.0",
     "releaseDate": "2023-10-15",
     "installerUrl": "https://dextolsolutions.com/downloads/zensl-installer-latest.exe",
     "changelog": [
-      "Added new feature X",
-      "Fixed bug Y",
-      "Improved performance Z"
+      "Release Version!"
     ]
 }
