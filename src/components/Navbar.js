@@ -19,7 +19,7 @@ function Navbar() {
 				<span className="logo-subtitle">Coding is our Hobby.</span>
 			</div>
 			<nav ref={navRef} className="nav-links">
-				<a href="/#" onClick={scrollToSection}>ZenSL Optimizer</a> {/* Added id for scrolling */}
+				<a href="/#projects" onClick={scrollToSection}>ZenSL Optimizer</a> {/* Added id for scrolling */}
 				<a href="/projects">Projects</a>                     {/* Updated path */}
 				<a href="/about">About</a>                           {/* Updated path */}
 				<a href="https://discord.com/invite/jTpB2VZZ4q" className="join-discord">Join Discord</a> {/* Discord invite link */}
