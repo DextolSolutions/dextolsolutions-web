@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import projectImage from '../assets/thumb.png'; // Importing the project image
-import { FaMousePointer, FaUndo, FaShieldAlt } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaMousePointer, FaUndo, FaShieldAlt, FaDownload} from 'react-icons/fa'; // Importing icons from react-icons
 
 function Home() {
   const [typedText, setTypedText] = useState(''); // Text to display
@@ -97,7 +97,7 @@ function Home() {
           <div className="project-info">
               <h3>ZenSL <span className="version-badge">Lite</span></h3>
               <p>Optimize Your Computer For Gaming.</p>
-              <button className="download-button" onClick={downloadInstaller}>Optimize Now</button>
+              <button className="download-button neon-hover" onClick={downloadInstaller}><FaDownload className="" />Download Now</button>
               <p className='os-compability'>Windows 10 / 11</p>
           </div>
           

@@ -1,9 +1,12 @@
 {
     "version": "2.0.1",
-    "releaseDate": "2025-02-22",
+    "releaseDate": "2025-03-1",
     "installerUrl": "https://dextolsolutions.com/downloads/zensl-installer-latest.exe",
     "changelog": [
-      "🚀> Dev Build ⚠️: Release Might Not Be Stable! ",
-      "- Bug Fixes & Design Enhancements"
+      "🚀> Final Release ! ",
+      "- Final Bug Fixes ",
+      "- Added Updater",
+      "----------------",
+      "THANK YOU FOR YOUR SUPPORT AND PATIENCE - HAVE FUN WITH ZENSL ~ Created By DextolReiniger"
     ]
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdHelpOutline } from "react-icons/md";
 import { FiUsers, FiAlertTriangle } from "react-icons/fi";
-import { FaDiscord, FaYoutube, FaTwitter, FaGithub } from "react-icons/fa"; // Import Font Awesome icons
+import { FaDiscord, FaYoutube, FaTwitterSquare, FaGithub } from "react-icons/fa"; // Import Font Awesome icons
 import './About.css';
 
 function About() {
@@ -60,7 +60,7 @@ function About() {
               <FaYoutube />
             </a>
             <a href="https://twitter.com/@DextolSolutions" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
-              <FaTwitter />
+              <FaTwitterSquare />
             </a>
             <a href="https://github.com/DextolReiniger" target="_blank" rel="noopener noreferrer" className="social-icon github">
               <FaGithub />
