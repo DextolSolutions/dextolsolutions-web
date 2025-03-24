@@ -82,7 +82,7 @@ function Home() {
       <section className="hero-section">
         <h1 className="hero-title">DextolSolutions</h1>
         <h2 className="hero-subtitle">Coding is our Hobby</h2>
-        <button className="hero-button-home" onClick={scrollToSection}>Show Projects</button>
+        <button className="hero-button-home" onClick={scrollToSection}>Download <span style={{ fontWeight: 'bold'}}>ZenSL Optimizer</span></button>
       </section>
 
       <section id="projects" className="home-section">   
