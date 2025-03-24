@@ -52,6 +52,12 @@
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Use the 3D application setting</SettingNameInfo>
+        <SettingID>272314421</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
     </Settings>
   </Profile>
 </ArrayOfProfile>
