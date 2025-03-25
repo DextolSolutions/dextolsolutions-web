@@ -1,9 +1,7 @@
 :root {
-    --buttonGrayColor: rgba(128, 128, 128, 0.25); /* Gray background color with 25% opacity */
-}
-
-/* Avatar Section */
-.avatar-container {
+    --buttonGrayColor: rgba(128, 128, 128, 0.25);
+    }
+    .avatar-container {
     position: absolute;
     top: 25%;
     left: 5%;
@@ -12,15 +10,12 @@
     flex-direction: column;
     align-items: center;
     z-index: 2;
-}
-
-.avatar-text {
+    }
+    .avatar-text {
     margin-top: 10px;
     text-align: center;
-}
-
-/* Typewriter Effect */
-.typewriter {
+    }
+    .typewriter {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     color: #ffffff50;
@@ -30,20 +25,16 @@
     overflow: hidden;
     width: 0;
     animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
+    }
+    @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
-}
-
-@keyframes blink {
+    }
+    @keyframes blink {
     from, to { border-color: transparent; }
     50% { border-color: white; }
-}
-
-/* Hero Section */
-.hero-section {
+    }
+    .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,23 +45,20 @@
     padding: 30px;
     transform: scale(1.05);
     position: relative;
-}
-
-.hero-title {
+    }
+    .hero-title {
     font-size: 4rem;
     margin-bottom: 10px;
     font-weight: 800;
     letter-spacing: 2px;
-}
-
-.hero-subtitle {
+    }
+    .hero-subtitle {
     font-size: 2rem;
     margin-bottom: 35px;
     color: #b0bec5;
     font-weight: 500;
-}
-
-.hero-button-home {
+    }
+    .hero-button-home {
     padding: 10px 40px;
     font-size: 1.2rem;
     color: #ffffff;
@@ -80,9 +68,8 @@
     cursor: pointer;
     transition: 0.3s;
     position: relative;
-}
-
-.hero-button-home::after {
+    }
+    .hero-button-home::after {
     content: '';
     width: 0;
     height: 0;
@@ -95,19 +82,15 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-}
-
-.hero-button-home:hover::after {
+    }
+    .hero-button-home:hover::after {
     opacity: 1;
-}
-
-.hero-button-home:hover {
+    }
+    .hero-button-home:hover {
     color: #eee;
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Home Section */
-.home-section {
+    }
+    .home-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,9 +100,8 @@
     border-radius: 25px;
     text-align: center;
     padding: 0 80px;
-}
-
-.home-title {
+    }
+    .home-title {
     font-size: 2.5rem;
     padding-bottom: 10px;
     border-bottom: #f39c12 2px solid;
@@ -127,10 +109,8 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
-}
-
-/* Projects Section */
-.projects-description {
+    }
+    .projects-description {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -146,66 +126,56 @@
     transition: all 0.3s ease;
     height: 80%;
     position: relative;
-}
-
-.projects-description:hover {
+    }
+    .projects-description:hover {
     border-color: #f39c12;
     box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
     transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
-}
-
-.project-image {
-    max-width: 45%;  /* Prevents the image from stretching too much */
+    }
+    .project-image {
+    max-width: 45%;
     height: auto;
     border-radius: 10px;
     filter: contrast(110%) saturate(105%);
     opacity: 0.9;
     transform: perspective(1000px) rotateX(15deg) rotateY(15deg);
     border-radius: 10px;
-    margin: 5% 0 0 10%;  /* Adds some space around the image */
-}
-
-.project-info {
+    margin: 5% 0 0 10%;
+    }
+    .project-info {
     color: #fff;
-    max-width: 45%;  /* Prevents the text block from stretching too much */
-    margin: 10% 10% 0 0;  /* Adds some space around the image */
-}
-
-.project-info h3 {
+    max-width: 45%;
+    margin: 10% 10% 0 0;
+    }
+    .project-info h3 {
     font-size: 3rem;
-}
-
-.version-badge {
+    }
+    .version-badge {
     background: rgba(255, 159, 32, 0.15);
     border-radius: 4px;
     color: #ff9f20;
     font-size: 3rem;
     padding: 2px 8px;
     margin-left: 10px;
-}
-
-.project-info p {
+    }
+    .project-info p {
     margin-top: 0;
     font-size: 1.2rem;
-}
-
-.project-info .os-compability {
+    }
+    .project-info .os-compability {
     color: #f39c12;
     letter-spacing: 1px;
     margin-top: 20px;
-}
-
-/* Feature Boxes */
-.feature-boxes {
+    }
+    .feature-boxes {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 300px;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.feature-box {
+    }
+    .feature-box {
     flex: 1 1 calc(33.333% - 20px);
     max-width: 300px;
     min-width: 250px;
@@ -217,160 +187,130 @@
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
+    }
+    .feature-box:hover {
     transform: translateY(-5px);
-}
-
-.feature-box p {
+    }
+    .feature-box p {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 10px;
-}
-
-.feature-icon {
+    }
+    .feature-icon {
     font-size: 2rem;
     color: #f39c12;
-}
-
-/* Modern Button Styles */
-.download-button {
-	background: linear-gradient(135deg, rgba(255, 159, 32, 0.8) 0%, rgba(255, 127, 0, 0.8) 100%);
-	border: none;
-	border-radius: 8px;
-	color: white;
-	cursor: pointer;
-	font-family: 'Poppins';
-	font-size: 1.25em;
-	height: 60px;
-	letter-spacing: 0.5px;
-	margin: 25px auto 0;
-	padding: 0 40px;
-	position: relative;
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	width: auto;
-}
-
-.download-button:disabled {
-	opacity: 0.75;
-	cursor: not-allowed;
-	pointer-events: none;
-	transition: all 0.3s;
-}
-
-.download-button:hover:not(:disabled) {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 25px rgba(255, 159, 32, 0.3);
-}
-
-.neon-hover:hover:not(:disabled) {
-	filter: drop-shadow(0 0 8px rgba(255, 159, 32, 0.5));
-}
-
-.download-button {
-	position: relative;
-	overflow: hidden;
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 12px;
-}
-
-.download-button.update-available {
-	background: linear-gradient(135deg, rgba(32, 159, 255, 0.8) 0%, rgba(0, 127, 255, 0.8) 100%);
-	box-shadow: 0 4px 15px rgba(32, 159, 255, 0.2);
-}
-
-.download-button.downloading {
-	background: linear-gradient(135deg, rgba(32, 159, 255, 0.8) 0%, rgba(0, 127, 255, 0.8) 100%);
-	box-shadow: 0 4px 15px rgba(32, 159, 255, 0.3);
-}
-
-.download-button:hover:not(:disabled) {
-	box-shadow: 0 8px 25px rgba(255, 159, 32, 0.4);
-}
-
-.download-button::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(90deg,
-			transparent,
-			rgba(255, 255, 255, 0.2),
-			transparent);
-	transition: 0.5s;
-}
-
-.download-button:hover:not(:disabled)::after {
-	left: 100%;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+    }
+    .download-button {
+    background: linear-gradient(135deg, rgba(255, 159, 32, 0.8) 0%, rgba(255, 127, 0, 0.8) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 1.25em;
+    height: 60px;
+    letter-spacing: 0.5px;
+    margin: 25px auto 0;
+    padding: 0 40px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+    }
+    .download-button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    pointer-events: none;
+    transition: all 0.3s;
+    }
+    .download-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 159, 32, 0.3);
+    }
+    .neon-hover:hover:not(:disabled) {
+    filter: drop-shadow(0 0 8px rgba(255, 159, 32, 0.5));
+    }
+    .download-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    }
+    .download-button.update-available {
+    background: linear-gradient(135deg, rgba(32, 159, 255, 0.8) 0%, rgba(0, 127, 255, 0.8) 100%);
+    box-shadow: 0 4px 15px rgba(32, 159, 255, 0.2);
+    }
+    .download-button.downloading {
+    background: linear-gradient(135deg, rgba(32, 159, 255, 0.8) 0%, rgba(0, 127, 255, 0.8) 100%);
+    box-shadow: 0 4px 15px rgba(32, 159, 255, 0.3);
+    }
+    .download-button:hover:not(:disabled) {
+    box-shadow: 0 8px 25px rgba(255, 159, 32, 0.4);
+    }
+    .download-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent);
+    transition: 0.5s;
+    }
+    .download-button:hover:not(:disabled)::after {
+    left: 100%;
+    }
+    @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+    font-size: 2.5rem;
     }
-
     .hero-subtitle {
-        font-size: 1.5rem;
+    font-size: 1.5rem;
     }
-
     .hero-button-home {
-        font-size: 1rem;
-        padding: 8px 30px;
+    font-size: 1rem;
+    padding: 8px 30px;
     }
-
     .projects-description {
-        flex-direction: column;
-        height: auto;
+    flex-direction: column;
+    height: auto;
     }
-
     .project-image,
     .project-info {
-        max-width: 100%;
+    max-width: 100%;
     }
-
     .feature-boxes {
-        flex-wrap: wrap;
-        gap: 50px;
-        justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
     }
-
     .feature-box {
-        height: auto;
+    height: auto;
     }
-
     .project-image {
-        max-height: 60%;
+    max-height: 60%;
     }
-}
-
-@media (max-width: 1920px) {
-    .typewriter {
     }
-
+    @media (max-width: 1920px) {
     .projects-description {
-        margin-bottom: 100px;
+    margin-bottom: 100px;
     }
-
     .project-info {
-        scale: .9;
-        margin: 50px 50px 0 0;
+    scale: .9;
+    margin: 50px 50px 0 0;
     }
-
     .project-image {
-        scale: .9;
-        margin: 0 0 0 100px;
+    scale: .9;
+    margin: 0 0 0 100px;
     }
-
     .feature-boxes {
-        scale: .9;
-        flex-wrap: nowrap;
-        text-wrap: nowrap;
+    scale: .9;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
     }
-}
+    }

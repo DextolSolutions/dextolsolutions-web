@@ -1,50 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import './Projects.css';
+import React, { useEffect, useState } from "react";
+import "./Projects.css";
 
 function Projects() {
-  const [typedText, setTypedText] = useState(''); // Text to display
-  const [textIndex, setTextIndex] = useState(0); // Current text index
-  const [isTyping, setIsTyping] = useState(true); // Typing or erasing state
-  const [charIndex, setCharIndex] = useState(0); // Current character index
+  const [typedText, setTypedText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [charIndex, setCharIndex] = useState(0);
 
-  const texts = [
-    "Nothing to show here yet!",
-    "Come back later!"
-  ]; // Array of texts
+  const texts = ["Nothing to show here yet!", "Come back later!"];
 
   useEffect(() => {
     let interval;
     if (isTyping) {
-      // Typing animation
       if (charIndex < texts[textIndex].length) {
         interval = setInterval(() => {
           setTypedText((prev) => prev + texts[textIndex].charAt(charIndex));
           setCharIndex(charIndex + 1);
-        }, 100); // Typing speed
+        }, 100);
       } else {
-        // Pause after typing the full text
-        setTimeout(() => setIsTyping(false), 2000); // Pause for 2 seconds
+        setTimeout(() => setIsTyping(false), 2000);
       }
     } else {
-      // Erasing animation
       if (charIndex > 0) {
         interval = setInterval(() => {
           setTypedText((prev) => prev.slice(0, -1));
           setCharIndex(charIndex - 1);
-        }, 50); // Erasing speed
+        }, 50);
       } else {
-        // Move to the next text
         setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        setIsTyping(true); // Start typing again
+        setIsTyping(true);
       }
     }
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval);
   }, [charIndex, isTyping, textIndex, texts]);
 
   return (
     <div>
-      <section className='projects-section'>
+      <section className="projects-section">
         <h1 className="projects-title">OUR PROJECTS</h1>
       </section>
       <div className="typewriter-container">
@@ -53,7 +46,6 @@ function Projects() {
         </div>
       </div>
     </div>
-
   );
 }
 
