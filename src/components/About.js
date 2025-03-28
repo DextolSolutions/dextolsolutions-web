@@ -80,7 +80,7 @@ function About() {
               <FaDiscord />
             </a>
             <a
-              href="https://www.youtube.com/@DextolDasMensch"
+              href="https://www.youtube.com/@DextolReiniger"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon youtube"
