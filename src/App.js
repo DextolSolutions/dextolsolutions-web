@@ -1,58 +1,52 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
-  // Funktion zum Erstellen von Sternen
   const createStar = () => {
-    const star = document.createElement('div');
-    star.className = 'star';
+    const star = document.createElement("div");
+    star.className = "star";
 
-    const size = Math.random() * 2 + 1; // Zufällige Sterngröße
+    const size = Math.random() * 2 + 1;
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 
-    star.style.top = `${Math.random() * 100}%`; // Zufällige vertikale Position
-    star.style.left = `${Math.random() * 100}%`; // Zufällige horizontale Position
-    star.style.animationDuration = `${Math.random() * 5 + 5}s`; // Zufällige Animationsdauer
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.animationDuration = `${Math.random() * 5 + 5}s`;
 
-    document.body.appendChild(star); // Stern zum Body hinzufügen
+    document.body.appendChild(star);
 
     setTimeout(() => {
-      star.remove(); // Stern nach der Animationsdauer entfernen
-    }, (parseFloat(star.style.animationDuration) * 1000)); // Umrechnung in Millisekunden
+      star.remove();
+    }, parseFloat(star.style.animationDuration) * 1000);
   };
 
-  // Erstellen von Sternen in Intervallen
   useEffect(() => {
-    const starInterval = setInterval(createStar, 100); // Alle 100ms einen neuen Stern
-    return () => clearInterval(starInterval); // Interval bei Unmount löschen
+    const starInterval = setInterval(createStar, 100);
+    return () => clearInterval(starInterval);
   }, []);
 
-  // Laden des externen Skripts (linkvertise.js)
   useEffect(() => {
-    // Dynamisch das linkvertise-Script laden
-    const script = document.createElement('script');
-    script.src = 'https://publisher.linkvertise.com/cdn/linkvertise.js';
+    const script = document.createElement("script");
+    script.src = "https://publisher.linkvertise.com/cdn/linkvertise.js";
     script.async = true;
     document.body.appendChild(script);
 
     script.onload = () => {
-      // Sobald das Script geladen ist, linkvertise mit den entsprechenden Optionen initialisieren
       if (window.linkvertise) {
         window.linkvertise(1239691, {
-          whitelist: ["youtube.com",""],
-          blacklist: [''],
+          whitelist: ["youtube.com", ""],
+          blacklist: [""],
         });
       }
     };
 
-    // Aufräumen: Script wieder entfernen, wenn der Component unmountet
     return () => {
       document.body.removeChild(script);
     };
@@ -62,7 +56,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="star-background"></div>
-        
+
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
