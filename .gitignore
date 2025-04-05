@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/database/development/dumped_envs
 
 # misc
 .DS_Store
