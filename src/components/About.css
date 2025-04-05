@@ -138,3 +138,41 @@
   .social-icon.github:hover {
   color: #6e5494;
   }
+
+
+@media (max-width: 768px) {
+  .main {
+    height: auto;
+  }
+  .about-section {
+    height: auto;
+    padding: 0 20px;
+  }
+  .about-title {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  .hero-section-2 {
+    position: static;
+    transform: none;
+    margin: 20px 0;
+  }
+  .about-content-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .about-info-container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-button-about {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .button-icon {
+    font-size: 1.2rem;
+  }
+}
