@@ -29,25 +29,14 @@ function App() {
 
   useEffect(() => {
     const starInterval = setInterval(createStar, 100);
-    return () => clearInterval(starInterval);
-  }, []);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://publisher.linkvertise.com/cdn/linkvertise.js";
-    script.async = true;
-    document.body.appendChild(script);
-
+    const script = document.createElement('script');
+    script.src = 'https://publisher.linkvertise.com/cdn/linkvertise.js';
     script.onload = () => {
-      if (window.linkvertise) {
-        window.linkvertise(1239691, {
-          whitelist: ["youtube.com", ""],
-          blacklist: [""],
-        });
-      }
+      window.linkvertise(1239691, {whitelist: ['https://www.youtube.com/@DextolReiniger', 'https://discord.com/invite/jTpB2VZZ4q', 'https://twitter.com/@DextolSolutions', 'https://github.com/DextolReiniger'], blacklist: []});
     };
-
+    document.body.appendChild(script);
     return () => {
+      clearInterval(starInterval);
       document.body.removeChild(script);
     };
   }, []);
