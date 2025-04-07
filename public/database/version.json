@@ -1,11 +1,11 @@
 {
-    "version": "2.0.5",
-    "releaseDate": "2025-04-05",
+    "version": "2.1.6",
+    "releaseDate": "2025-04-07",
     "installerUrl": "https://dextolsolutions.com/downloads/zensl-installer-latest.exe",
     "changelog": [
-      "🚀> Patch 2.0.5 <🚀",
-      "- Optimize & Revert- Assistant Enhancements",
-      "- UI Quality Enhancements & Bug Fixes",
+      "🚀> Patch 2.1.6 <🚀",
+      "- Major Bug Fixes Of Previous Patch",
+      "- Major UI Improvements",
       "----------------"
     ]
 }
